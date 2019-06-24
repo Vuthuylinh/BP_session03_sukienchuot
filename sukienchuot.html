@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>move a ball</title>
+</head>
+<body>
+<form>
+    <img id="soccer_ball" src="soccer_ball.jpg" height="500" width="500"/>
+<p>Click the buttons below to move the ball </p>
+<input type="button" value ="Move Right"onclick="moveRight();"/>
+    <input type="button" value ="Move Left"onclick="moveLeft();"/>
+
+</form>
+<script>
+let imgObj = null;
+imgObj = document.getElementById('soccer_ball');
+function init(){
+    imgObj =document.getElementById('soccer_ball');
+    imgObj.style.position = 'relative';
+    imgObj.style.right = '0px';
+//imgObj.style.right = '0px' định dạng cách lề để di chuyển
+}
+function moveRight(){
+    imgObj.style.right= parseInt(imgObj.style.right) - 10 + 'px';
+}
+
+function moveLeft(){
+    imgObj.style.right = parseInt(imgObj.style.right) + 10 + 'px';}
+window.onload = init;
+
+
+</script>
+</body>
+</html>
